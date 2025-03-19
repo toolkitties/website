@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=1">
+    <title>{% if page.title %}{{ page.title }} - {% endif -%} {{ site.title }}</title>
+    <meta name="description" content="{{ site.tagline }}" />
+    <link rel="stylesheet" href="{{ "./assets/styles.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!-- <link rel="icon" href="{{ "./assets/images/favicon.svg" | relative_url }}"> -->
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        Header
+        <a href="{{ site.url }}">Home</a>
+      </header>
+      <main>
+        {{ content }}
+      </main>
+      <footer>
+        Footer
+      </footer>
+    </div>
+  </body>
+</html>
