@@ -26,15 +26,7 @@ h5 {
   font-weight: 700;
   margin: 0;
   color: #fff;
-}
-
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a {
-  color: #b4ffb2;
-  text-decoration: underline;
+  scroll-margin-top: 100px;
 }
 
 h1 {
@@ -139,21 +131,58 @@ figcaption a {
   clear: both;
 }
 
-header {
+main {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.navigation {
+  display: none;
+  position: relative;
+}
+
+.navigation-visible {
+  display: block;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navigation li {
+  color: #fff;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.navigation-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  margin-right: 25px;
+}
+
+.header {
   position: sticky;
   top: 10px;
   margin-left: 10px;
   margin-bottom: 5px;
   margin-right: 10px;
   overflow: hidden;
+  cursor: pointer;
   padding: 5px;
   border-radius: 100px;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid #fff;
   text-align: center;
   background: #171717;
 }
 
-header p {
+.header:hover {
+  background-color: #c398ff;
+}
+
+.header p {
   font-size: 1.5rem;
   color: #fff;
   font-family: "Pixelify Sans", sans-serif;
@@ -162,16 +191,11 @@ header p {
   margin: 0rem;
 }
 
-main {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two
+/* Responsive layout - when the screen is less than 1024px wide, make the two
  * columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn,
-  .rightcolumn {
+@media screen and (max-width: 1024px) {
+  .column-left,
+  .column-right {
     width: 100%;
     padding: 0;
   }

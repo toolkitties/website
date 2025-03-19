@@ -7,16 +7,22 @@
     <title>{% if page.title %}{{ page.title }} - {% endif -%} {{ site.title }}</title>
     <meta name="description" content="{{ site.tagline }}" />
     <link rel="stylesheet" href="{{ "./assets/styles.css?v=" | append: site.github.build_revision | relative_url }}">
-    <!-- <link rel="icon" href="{{ "./assets/images/favicon.svg" | relative_url }}"> -->
+    <link rel="icon" href="{{ "./assets/images/favicon.svg" | relative_url }}">
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Atkinson Hyperlegible' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Ubuntu Mono' rel='stylesheet'>
   </head>
   <body>
     <div class="row">
-      <div class="column-left">
-        <header>
-          <p>toolkitty app intro</p>
+      <div class="column-left" id="scroll">
+        <header class="header" id="header">
+          <p id="current-section">{{ site.title }}</p>
+          <nav class="navigation" id="navigation">
+            <button class="navigation-close" id="navigation-close">Close</button>
+            <ul id="navigation-items">
+              <!-- This gets populated by the JavaScript code -->
+            </ul>
+          </nav>
         </header>
         <main>
           <img src="{{ "./assets/images/toolkitty.png" | relative_url }}" alt="avatar" style="width:400px;">
@@ -29,5 +35,6 @@
         </div>
       </aside>
     </div>
+    <script src="{{ "./assets/app.js?v=" | append: site.github.build_revision | relative_url }}"></script>
   </body>
 </html>
