@@ -1,9 +1,178 @@
 :root {
-  --black: #000;
-  --white: #fff;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 body {
-  font-weight: 400;
+  background-color: #171717;
   font-style: normal;
+  font-weight: 400;
+  height: 100%;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a {
+  color: #b4ffb2;
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+p {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  line-height: 1;
+  display: block;
+}
+
+p a {
+  color: #b4ffb2;
+  border-bottom: 0px solid rgba(127, 127, 127, 0.2);
+  text-decoration: underline;
+}
+
+img {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+ol {
+  margin: 0;
+  padding: 0 0 0 2.5em;
+  list-style-type: decimal-leading-zero;
+}
+
+ul {
+  margin: 0;
+  padding: 0 0 0 2em;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0 0 0 2em;
+}
+
+hr {
+  background: #fff;
+  border: 0;
+  height: 1px;
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+figcaption {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #000;
+  font-family: "Pixelify Sans", sans-serif;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: 1;
+  display: block;
+}
+
+figcaption a {
+  text-decoration: underline;
+  color: #b4ffb2;
+}
+
+/* layout */
+
+.column-left {
+  float: left;
+  width: 75%;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.column-right {
+  background-color: #c398ff;
+  float: left;
+  width: 25%;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.card {
+   padding: 5px;
+   margin-top: 5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+header {
+  position: sticky;
+  top: 10px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  overflow: hidden;
+  padding: 5px;
+  border-radius: 100px;
+  border: 1px solid rgb(255, 255, 255);
+  text-align: center;
+  background: #171717;
+}
+
+header p {
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: "Pixelify Sans", sans-serif;
+  line-height: 1.2;
+  display: block;
+  margin: 0rem;
+}
+
+main {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two
+ * columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
 }

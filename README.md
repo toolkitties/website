@@ -14,9 +14,6 @@ Official [toolkitty](https://toolkitty.org) website.
 # Install Ruby dependencies
 bundle install
 
-# Export the gem path if this is your first run
-export GEM_HOME=$HOME/.gem
-
 # Run development web server
 jekyll serve
 
