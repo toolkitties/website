@@ -171,7 +171,11 @@ sup a {
   color: #FF9A9C;
 }
 
-/* layout */
+.logo {
+  width: 100%;
+  max-width: 400px;
+  border: 0;
+}
 
 .column-left {
   float: left;
@@ -271,7 +275,7 @@ main {
 }
 
 .header:hover {
-  background-color: #051F07;
+  background-color: var(--purple);
 }
 
 .header p {
