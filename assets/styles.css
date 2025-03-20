@@ -146,7 +146,7 @@ sup a {
   text-decoration: none;
 }
 
-#footnotes {
+.footnotes {
   font-size: 1.2rem;
   color: var(--white);
   font-family: "Ubuntu Mono";
@@ -155,11 +155,11 @@ sup a {
   margin-top: 3rem;
 }
 
-#footnotes ol {
+.footnotes ol {
   list-style-type: decimal;
 }
 
-#footnotes a {
+.footnotes a {
   text-decoration: none;
   color: var(--red);
 }
@@ -203,6 +203,7 @@ sup a {
 main {
   margin-left: 10px;
   margin-right: 10px;
+  margin-bottom: 25px;
 }
 
 .navigation {
@@ -281,7 +282,7 @@ main {
 
 .header p {
   font-size: 1.8rem;
-  color: #fff;
+  color: var(--white);
   font-family: "Pixelify Sans", sans-serif;
   line-height: 1.2;
   display: block;
@@ -293,21 +294,24 @@ main {
 }
 
 .red {
-  color: var(--red)
+  color: var(--red);
 }
 
 .blue {
-  color: var(--blue)
+  color: var(--blue);
 }
 
 .green {
-  color: var(--green)
+  color: var(--green);
 }
 
 .yellow {
-  color: var(--yellow)
+  color: var(--yellow);
 }
 
+.meow {
+  display: none;
+}
 
 /* Responsive layout - when the screen is less than 1024px wide, make the two
  * columns stack on top of each other instead of next to each other */
@@ -315,6 +319,10 @@ main {
   body {
     height: initial;
     overflow: auto;
+  }
+
+  .meow {
+    display: block;
   }
 
   .column-left,

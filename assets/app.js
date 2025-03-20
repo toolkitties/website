@@ -25,6 +25,13 @@ function checkScrollPosition() {
   const target = getScrollContainer();
   currentSection.innerText = defaultTitle;
   for (const heading of headings) {
+    if (
+      "aria-hidden" in heading.attributes &&
+      window.innerWidth > MOBILE_WIDTH
+    ) {
+      continue;
+    }
+
     if (target.scrollTop > heading.offsetTop - heading.offsetHeight - 1) {
       currentSection.innerText = heading.innerText;
     }
@@ -41,7 +48,7 @@ const nav = document.getElementById("navigation");
 const navItems = document.getElementById("navigation-items");
 
 for (const heading of headings) {
-  if (("aria-hidden" in heading.attributes)) {
+  if ("aria-hidden" in heading.attributes) {
     continue;
   }
 
