@@ -149,11 +149,25 @@ main {
 .navigation ul {
   list-style: none;
   padding: 0;
+  margin-top: 5px;
 }
 
 .navigation li {
   color: #fff;
   font-family: "Pixelify Sans", sans-serif;
+  border-bottom: 1px solid transparent;
+}
+
+.navigation li:hover {
+  text-decoration: underline;
+}
+
+.navigation li::before {
+  content: "> ";
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 2px;
+  margin-right: 10px;
 }
 
 .navigation-close {
@@ -165,31 +179,27 @@ main {
 }
 
 .header {
-  position: sticky;
-  top: 10px;
-  margin-left: 10px;
-  margin-bottom: 5px;
-  margin-right: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  padding: 5px;
+  background: #171717;
   border-radius: 100px;
   border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 0;
+  padding: 5px;
+  position: sticky;
   text-align: center;
-  background: #171717;
+  top: 10px;
+  user-select: none;
 }
 
 .header:hover {
   background-color: #c398ff;
-}
-
-.header p {
-  font-size: 1.5rem;
-  color: #fff;
-  font-family: "Pixelify Sans", sans-serif;
-  line-height: 1.2;
-  display: block;
-  margin: 0rem;
 }
 
 /* Responsive layout - when the screen is less than 1024px wide, make the two

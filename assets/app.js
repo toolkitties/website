@@ -46,16 +46,8 @@ for (const heading of headings) {
 // Open / Close navigation.
 
 const header = document.getElementById("header");
-const navClose = document.getElementById("navigation-close");
 
 header.addEventListener("click", (event) => {
-  if (!nav.classList.contains("navigation-visible")) {
-    event.stopPropagation();
-    nav.classList.add("navigation-visible");
-  }
-});
-
-navClose.addEventListener("click", (event) => {
   event.stopPropagation();
-  nav.classList.remove("navigation-visible");
+  nav.classList.toggle("navigation-visible");
 });
