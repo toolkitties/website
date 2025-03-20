@@ -21,18 +21,19 @@
 
 @font-face {
   font-family: "Ubuntu Mono";
-  src: url('./fonts/UbuntuMono-Regular.ttf') format('opentype');
+  src: url('./fonts/UbuntuMono-Regular.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
 }
 
 :root {
   --black: #171717;
-  --blue: #c398ff;
+  --blue: #BACEFF;
   --green: #b4ffb2;
   --purple: #c398ff;
   --yellow: #ffe20a;
   --white: #fff;
+  --red: #FF9A9C;
 }
 
 * {
@@ -62,14 +63,12 @@ h3 {
 }
 
 p + h1,
-p + h2,
-p + h3 {
+p + h2, {
   margin-top: 3rem;
 }
 
 p + h1,
-p + h2,
-p + h3 {
+p + h2, {
   margin-top: 3rem;
 }
 
@@ -83,7 +82,12 @@ h2 {
   line-height: 1.5;
 }
 
-p {
+h3 {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+p, ul {
   font-size: 2rem;
   font-weight: 400;
   color: var(--white);
@@ -111,7 +115,8 @@ ol {
 
 ul {
   margin: 0;
-  padding: 0 0 0 2em;
+  padding: 0 0 0 1.5em;
+  list-style-type: "⟡ ";
 }
 
 blockquote {
@@ -141,7 +146,7 @@ figcaption {
 
 figcaption a {
   text-decoration: underline;
-  color: #b4ffb2;
+  color: var(--green);
 }
 
 sup {
@@ -156,10 +161,11 @@ sup a {
 #footnotes {
   font-size: 1.2rem;
   font-weight: 300;
-  color: #ffffff;
+  color: var(--white);
   font-family: "Ubuntu Mono";
   line-height: 1.2;
   letter-spacing: 1;
+  margin-top: 3rem;
 }
 
 #footnotes ol {
@@ -168,7 +174,7 @@ sup a {
 
 #footnotes a {
   text-decoration: none;
-  color: #FF9A9C;
+  color: var(--red);
 }
 
 .logo {
@@ -185,7 +191,7 @@ sup a {
 }
 
 .column-right {
-  background-color: var(--blue);
+  background-color: var(--purple);
   float: left;
   width: 25%;
   padding-left: 5px;
@@ -286,6 +292,27 @@ main {
   display: block;
   margin: 0rem;
 }
+
+.purple {
+  color: var(--purple);
+}
+
+.red {
+  color: var(--red)
+}
+
+.blue {
+  color: var(--blue)
+}
+
+.green {
+  color: var(--green)
+}
+
+.yellow {
+  color: var(--yellow)
+}
+
 
 /* Responsive layout - when the screen is less than 1024px wide, make the two
  * columns stack on top of each other instead of next to each other */
