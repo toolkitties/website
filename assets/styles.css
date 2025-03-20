@@ -19,6 +19,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Ubuntu Mono";
+  src: url('./fonts/UbuntuMono-Regular.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --black: #171717;
   --blue: #c398ff;
@@ -244,7 +251,7 @@ main {
 }
 
 .header {
-  border-radius: 100px;
+  border-radius: 25px;
   background-color: var(--black);
   border: 1px solid var(--white);
   color: var(--white);
