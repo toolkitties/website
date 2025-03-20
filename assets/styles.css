@@ -20,7 +20,12 @@
 }
 
 :root {
-  height: 100%;
+  --black: #171717;
+  --blue: #c398ff;
+  --green: #b4ffb2;
+  --purple: #c398ff;
+  --yellow: #ffe20a;
+  --white: #fff;
 }
 
 * {
@@ -30,7 +35,7 @@
 }
 
 body {
-  background-color: #171717;
+  background-color: var(--black);
   font-style: normal;
   font-weight: 400;
   height: 100%;
@@ -40,15 +45,19 @@ body {
 
 h1,
 h2,
-h3,
-h4,
-h5 {
+h3 {
   font-family: "Atkinson Hyperlegible";
   font-style: normal;
   font-weight: 700;
   margin: 0;
-  color: #fff;
+  color: var(--white);
   scroll-margin-top: 100px;
+}
+
+p + h1,
+p + h2,
+p + h3 {
+  margin-top: 3rem;
 }
 
 h1 {
@@ -64,21 +73,23 @@ h2 {
 p {
   font-size: 2rem;
   font-weight: 400;
-  color: #fff;
+  color: var(--white);
   font-family: "Atkinson Hyperlegible";
-  font-style: normal;
-  line-height: 1;
-  display: block;
+  line-height: 1.2;
+}
+
+p + p {
+  margin-top: 1rem;
 }
 
 p a {
-  color: #b4ffb2;
-  border-bottom: 0px solid rgba(127, 127, 127, 0.2);
-  text-decoration: underline;
+  color: var(--green);
+  border-bottom: 2px solid var(--green);
+  text-decoration: none;
 }
 
 img {
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid var(--black);
 }
 
 ol {
@@ -98,7 +109,7 @@ blockquote {
 }
 
 hr {
-  background: #fff;
+  background-color: var(--white);
   border: 0;
   height: 1px;
   display: block;
@@ -109,7 +120,7 @@ hr {
 figcaption {
   font-size: 1rem;
   font-weight: 400;
-  color: #000;
+  color: var(--black);
   font-family: "Pixelify Sans", sans-serif;
   font-style: normal;
   line-height: 1.2;
@@ -132,7 +143,7 @@ figcaption a {
 }
 
 .column-right {
-  background-color: #c398ff;
+  background-color: var(--blue);
   float: left;
   width: 25%;
   padding-left: 5px;
@@ -174,7 +185,7 @@ main {
 }
 
 .navigation li {
-  color: #fff;
+  color: var(--white);
   font-family: "Pixelify Sans", sans-serif;
   font-weight: 400;
   border-bottom: 1px solid transparent;
@@ -201,10 +212,10 @@ main {
 }
 
 .header {
-  background: #171717;
   border-radius: 100px;
-  border: 1px solid #fff;
-  color: #fff;
+  background-color: var(--black);
+  border: 1px solid var(--white);
+  color: var(--white);
   cursor: pointer;
   font-family: "Pixelify Sans", sans-serif;
   font-size: 1.5rem;
@@ -221,7 +232,23 @@ main {
 }
 
 .header:hover {
-  background-color: #c398ff;
+  background-color: var(--purple);
+}
+
+.purple {
+  color: var(--purple);
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.green {
+  color: var(--green);
 }
 
 /* Responsive layout - when the screen is less than 1024px wide, make the two
