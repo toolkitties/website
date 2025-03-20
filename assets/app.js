@@ -58,6 +58,7 @@ for (const heading of headings) {
   menu.appendChild(anchor);
   anchor.innerText = heading.innerText;
   menu.addEventListener("click", (event) => {
+    event.target.blur();
     event.preventDefault();
     event.stopPropagation();
     const target = getScrollContainer();
