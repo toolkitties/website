@@ -60,14 +60,20 @@ p + h3 {
   margin-top: 3rem;
 }
 
+p + h1,
+p + h2,
+p + h3 {
+  margin-top: 3rem;
+}
+
 h1 {
-  font-size: 5rem;
-  line-height: 1;
+  font-size: 3rem;
+  line-height: 1.5;
 }
 
 h2 {
   font-size: 3rem;
-  line-height: 1.1;
+  line-height: 1.5;
 }
 
 p {
@@ -75,11 +81,9 @@ p {
   font-weight: 400;
   color: var(--white);
   font-family: "Atkinson Hyperlegible";
+  font-style: normal;
   line-height: 1.2;
-}
-
-p + p {
-  margin-top: 1rem;
+  display: block;
 }
 
 p a {
@@ -131,6 +135,33 @@ figcaption {
 figcaption a {
   text-decoration: underline;
   color: #b4ffb2;
+}
+
+sup {
+  vertical-align: top;
+  font-size: 0.6em;
+}
+
+sup a {
+  text-decoration: none;
+}
+
+#footnotes {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #ffffff;
+  font-family: "Ubuntu Mono";
+  line-height: 1.2;
+  letter-spacing: 1;
+}
+
+#footnotes ol {
+  list-style-type: decimal;
+}
+
+#footnotes a {
+  text-decoration: none;
+  color: #FF9A9C;
 }
 
 /* layout */
@@ -201,6 +232,7 @@ main {
   font-size: 20px;
   margin-top: 2px;
   margin-right: 10px;
+  font-size: 1.5rem;
 }
 
 .navigation-close {
@@ -232,23 +264,16 @@ main {
 }
 
 .header:hover {
-  background-color: var(--purple);
+  background-color: #051F07;
 }
 
-.purple {
-  color: var(--purple);
-}
-
-.yellow {
-  color: var(--yellow);
-}
-
-.blue {
-  color: var(--blue);
-}
-
-.green {
-  color: var(--green);
+.header p {
+  font-size: 1.8rem;
+  color: #fff;
+  font-family: "Pixelify Sans", sans-serif;
+  line-height: 1.2;
+  display: block;
+  margin: 0rem;
 }
 
 /* Responsive layout - when the screen is less than 1024px wide, make the two
