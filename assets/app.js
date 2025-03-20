@@ -1,5 +1,3 @@
-const SCROLL_OFFSET_PX = 100 + 1;
-
 const scrollContainer = document.getElementById("scroll");
 const currentSection = document.getElementById("current-section");
 const headings = ["h1", "h2", "h3", "h4", "h5", "h6"].reduce(
@@ -16,7 +14,7 @@ const defaultTitle = currentSection.innerText;
 function checkScrollPosition() {
   currentSection.innerText = defaultTitle;
   for (const heading of headings) {
-    if (scrollContainer.scrollTop > heading.offsetTop - SCROLL_OFFSET_PX) {
+    if (scrollContainer.scrollTop > heading.offsetTop - heading.offsetHeight) {
       currentSection.innerText = heading.innerText;
     }
   }
@@ -35,8 +33,9 @@ for (const heading of headings) {
   menu.innerText = heading.innerText;
   menu.addEventListener("click", (event) => {
     event.stopPropagation();
-    heading.scrollIntoView({
+    scrollContainer.scrollTo({
       behavior: "smooth",
+      top: heading.offsetTop - heading.offsetHeight,
     });
     nav.classList.remove("navigation-visible");
   });
