@@ -21,7 +21,7 @@
 
 @font-face {
   font-family: "Ubuntu Mono";
-  src: url('./fonts/UbuntuMono-Regular.ttf') format('ttf');
+  src: url('./fonts/UbuntuMono-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
@@ -59,7 +59,7 @@ h3 {
   font-weight: 700;
   margin: 0;
   color: var(--white);
-  scroll-margin-top: 100px;
+  line-height: 1.1;
 }
 
 p + h1,
@@ -74,12 +74,10 @@ p + h2, {
 
 h1 {
   font-size: 3rem;
-  line-height: 1.5;
 }
 
 h2 {
   font-size: 3rem;
-  line-height: 1.5;
 }
 
 h3 {
@@ -99,7 +97,7 @@ p, ul {
 
 p a {
   color: var(--green);
-  border-bottom: 2px solid var(--green);
+  border-bottom: 1px solid var(--green);
   text-decoration: none;
 }
 
@@ -160,7 +158,6 @@ sup a {
 
 #footnotes {
   font-size: 1.2rem;
-  font-weight: 300;
   color: var(--white);
   font-family: "Ubuntu Mono";
   line-height: 1.2;
@@ -178,6 +175,7 @@ sup a {
 }
 
 .logo {
+  margin-top: 50px;
   width: 100%;
   max-width: 400px;
   border: 0;
@@ -274,9 +272,11 @@ main {
   margin-right: 10px;
   margin-top: 0;
   padding: 5px;
-  position: sticky;
+  position: fixed;
   text-align: center;
   top: 10px;
+  right: 25%;
+  left: 0;
   user-select: none;
 }
 
@@ -317,11 +317,31 @@ main {
 /* Responsive layout - when the screen is less than 1024px wide, make the two
  * columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 1024px) {
-  .column-left {
+  body {
+    height: initial;
+    overflow: auto;
+  }
+
+  .column-left,
+  .column-right {
+    float: initial;
+    overflow: initial;
+    height: initial;
     width: 100%;
   }
 
   .column-right {
-    display: none;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .card {
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  .header {
+    right: 0;
   }
 }

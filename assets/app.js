@@ -14,10 +14,12 @@ const defaultTitle = currentSection.innerText;
 function checkScrollPosition() {
   currentSection.innerText = defaultTitle;
   for (const heading of headings) {
-    if (scrollContainer.scrollTop > heading.offsetTop - heading.offsetHeight) {
+    if (scrollContainer.scrollTop > heading.offsetTop - heading.offsetHeight - 1) {
       currentSection.innerText = heading.innerText;
     }
   }
+
+  console.log(scrollContainer.offsetHeight, scrollContainer.scrollTop);
 }
 
 scrollContainer.addEventListener("scroll", checkScrollPosition);
