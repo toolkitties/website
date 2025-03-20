@@ -12,14 +12,14 @@
   <body>
     <div class="row">
       <div class="column-left" id="scroll">
-        <header class="header" id="header">
+        <button class="header" id="header">
           <div id="current-section">{{ site.title }}</div>
           <nav class="navigation" id="navigation">
             <ul id="navigation-items">
               <!-- This gets populated by the JavaScript code -->
             </ul>
           </nav>
-        </header>
+        </button>
         <main>
           <img class="logo" src="{{ "./assets/images/toolkitty.png" | relative_url }}" alt="{{ site.title }}">
           {{ content }}
